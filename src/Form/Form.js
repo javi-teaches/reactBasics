@@ -7,6 +7,7 @@ class Form extends Component {
 		return (
 			<React.Fragment>
 				<InputText inputName="first" text="Nombre" helper="Escribí tu nombre" />
+				<InputText inputName="first" helper="Escribí tu nombre" />
 				<InputText inputName="last" text="Apellido" helper="Escribí tu apellido" />
 				<InputText inputName="email" text="Email" helper="Escribí tu email" />
 				<br/>
