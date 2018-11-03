@@ -12,9 +12,24 @@ class App extends Component {
   render() {
     return (
 		<div className="container">
-			<Counter initialValue={1} />
-			<Counter initialValue={5} />
-			<Counter initialValue={10} />
+			<Counter
+				initialValue={1}
+				txtAlert="Hola"
+				increment={1} pdtos={['Papa', 'Arroz', 'Carne']}
+				addPdto="Zapallo"
+			/>
+			<Counter
+				initialValue={5}
+				txtAlert="Chau"
+				increment={5} pdtos={['Frutilla', 'Naranja', 'Sandía']}
+				addPdto="Melón"
+			/>
+			<Counter
+				initialValue={10}
+				txtAlert="Buenasssss"
+				increment={10} pdtos={['Mouse', 'Teclado', 'Pad']}
+				addPdto="Teléfono"
+			/>
 			<Navbar
 				h1Text="Saludos"
 				enlaces={[

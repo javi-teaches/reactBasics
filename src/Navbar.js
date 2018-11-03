@@ -7,19 +7,15 @@ const myStyles = {
 	color: "#fff"
 };
 
-const Navbar = function (props) {
-	return(
-		<nav style={myStyles}>
-			<h2>{props.h1Text}</h2>
-			<ul>
-				{
-					props.enlaces.map((enlace, i) => <li key={i} ><a href={enlace.url}>{enlace.name}</a></li>)
-				}
-			</ul>
-			{props.children}
-		</nav>
-	);
-}
+const Navbar = ({ enlaces, h1Text, children }) => (
+	<nav style={myStyles}>
+		<h2>{h1Text}</h2>
+		<ul>
+			{ enlaces.map((enlace, i) => <li key={i} ><a href={enlace.url}>{enlace.name}</a></li>) }
+		</ul>
+		{children}
+	</nav>
+);
 
 Navbar.propTypes = {
 	h1Text: PropTypes.string.isRequired
